@@ -30,25 +30,24 @@ import org.ini4j.*;
 
 public class Analyst {
 
-	public static Wini ini;
+    public static Wini ini;
 
     public final static int INPUT_NEURON_COUNT = 11;
     public final static int WIDTH = 50;
-	public final static int HEIGHT = 50;
-	public static int MAX_EPOCH = 1000; // will be edited
+    public final static int HEIGHT = 50;
+    public static int MAX_EPOCH = 1000; // will be edited
 
     private static SOM network;
-	private static BasicTrainSOM train;
-	private static MLDataSet trainingSet;
-	private static MLDataSet evaluationSet;
+    private static BasicTrainSOM train;
+    private static MLDataSet trainingSet;
+    private static MLDataSet evaluationSet;
+    private static double LEARNING_RATE = 0;
+    private static double START_RATE = 0;
+    private static double END_RATE = 0;
+    private static int START_RADIUS = 0;
+    private static int END_RADIUS = 0;
 
-	private static double LEARNING_RATE = 0;
-	private static double START_RATE = 0;
-	private static double END_RATE = 0;
-	private static int START_RADIUS = 0;
-	private static int END_RADIUS = 0;
-
-	private static org.encog.mathutil.matrices.Matrix weights;
+    private static org.encog.mathutil.matrices.Matrix weights;
 
 
 	public static void main(String[] args) throws IOException {
